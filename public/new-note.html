@@ -6,29 +6,34 @@
 <body class="bg-gray-light font-sans relative">
     <div class="max-w-960 m-auto pt-10">
         <header class="grid grid-cols-2">
-            <a href="#" class="max-w-185 text-4xl text-green font-medium">Блокнотик</a>
+            <a href="#" class="max-w-185 text-4xl text-green-bright font-medium">Блокнотик</a>
             <menu class="max-w-fit grid grid-flow-col content-center justify-self-end gap-5">
                 <li>
-                    <a href="#" class="text-base text-normal-black active:text-black hover:text-hover-black">
-                        <img class="float-left p-1" src="images/add.svg">
+                    <a href="#" class="text-base text-normal-black active:text-black hover:text-hover-black ">
+                        <img class="float-left p-1" src="images/icons/add.svg">
                         Новая запись
                     </a>
                 </li>
                 <li>
                     <a href="#" class="text-base text-normal-black active:text-black hover:text-hover-black">
-                        <img class="float-left p-1" src="images/note.svg">
+                        <img class="float-left p-1" src="images/icons/note.svg">
                         Список заметок
                     </a>
                     </li>
             </menu>
         </header>
         <article class="mt-6">
-            <div class="bg-white-bg-article text-black-grey font-350 text-sm leading-6 pt-6 pr-7 pl-7 mt-6 rounded-lg space-y-5 pb-6
-            ">
-                <input class="min-w-full" placeholder="Заголовок"> 
-                <input class="min-h-320 min-w-full align-text-top" placeholder="Содержимое заметки">               
+            <div class="bg-white-bg-article text-black-grey font-350 leading-6 pt-6 pr-7 
+            pl-7 mt-6 rounded-lg space-y-5 pb-6">
+                <input class="min-w-full text-xl placeholder:italic outline-none" placeholder="Заголовок"> 
+                <textarea class="min-h-280 min-w-full placeholder:italic resize-none outline-none h-max " placeholder="Содержимое заметки"></textarea>           
+                <div class="grid grid-cols-1 ">
+                    <button class="grid grid-flow-col justify-self-end bg-green-bright text-white-bg-article pr-4 pl-4 pt-2 pb-2 rounded-md hover:bg-green active:bg-green-button  "> 
+                        <img class="float-left p-1" src="images/icons/add-button.svg">Добавить
+                    </button>
+                </div>
             </div>
-        
+            
         </article>
         <footer class=" mt-9 mb-9 text-center">
             <span class="text-gray text-xs font-350">
@@ -38,3 +43,20 @@
     </div>
 </body>
 </html>
+<script>
+var textarea = document.getElementsByTagName('textarea')[0];
+
+textarea.addEventListener('keydown', resize);
+
+function calcHeight(value) {
+  let numberOfLineBreaks = (value.match(/\n/g) || []).length;
+  // min-height + lines x line-height + padding + border
+  let newHeight = 20 + numberOfLineBreaks * 25 + 20 + 5;
+  return newHeight;
+}
+
+function resize() {
+    textarea.style.height = calcHeight(textarea.value) + "px";
+}
+
+</script>
