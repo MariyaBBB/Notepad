@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="dist/styles.css">
 </head>
-<body class="bg-gray-light font-sans">
+<body class="bg-gray-light font-sans relative">
     <div class="max-w-960 m-auto pt-10">
         <header class="grid grid-cols-2">
             <a href="#" class="max-w-185 text-4xl text-green font-medium">Блокнотик</a>
@@ -67,11 +67,15 @@
                     tristique eget. Vivamus finibus, orci nec pretium venenatis, urna tortor consequat arcu, at laoreet massa 
                     odio id urna. </p>
                 
-                <div class=" mt-8 ">
+                <div class="mt-8">
                     <img class="float-left pt-1 pr-1" src="images/calendar.svg">
-                            <span class="text-xs text-gray ">21 августа 2022г.</span>
+                    <span class="text-xs text-gray ">21 августа 2022г.</span>
                 </div>
             </div>
+            <aside class="fixed top-52 left-52">
+                <a><img class="" src="images/edit.svg"></a>
+                <a><img class="pt-1" src="images/delete.svg"></a>
+            </aside>
         </article>
         <footer class=" mt-9 mb-9 text-center">
             <span class="text-gray text-xs font-350">
