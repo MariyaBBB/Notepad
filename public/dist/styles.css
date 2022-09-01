@@ -617,18 +617,22 @@ video {
   margin-top: 2rem;
 }
 
+.mt-1{
+  margin-top: 0.25rem;
+}
+
 .grid{
   display: grid;
 }
 
-.max-h-fit{
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+.h-max{
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
-.min-h-320{
-  min-height: 320px;
+.min-h-280{
+  min-height: 280px;
 }
 
 .min-w-full{
@@ -649,6 +653,14 @@ video {
   max-width: fit-content;
 }
 
+.resize-none{
+  resize: none;
+}
+
+.resize{
+  resize: both;
+}
+
 .grid-flow-col{
   grid-auto-flow: column;
 }
@@ -659,14 +671,6 @@ video {
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-rows-2{
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
-.place-content-start{
-  place-content: start;
 }
 
 .content-center{
@@ -689,10 +693,6 @@ video {
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
-.justify-self-start{
-  justify-self: start;
-}
-
 .justify-self-end{
   justify-self: end;
 }
@@ -705,6 +705,14 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-md{
+  border-radius: 0.375rem;
+}
+
+.border{
+  border-width: 1px;
+}
+
 .bg-gray-light{
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
@@ -715,13 +723,29 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-green-bright{
+  background-color: rgba(15, 186, 83, 1);
+}
+
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-dirt-yellow{
+  background-color: rgba(212, 169, 17, 1);
+}
+
+.bg-red{
+  background-color: rgba(212, 29, 17, 1);
+}
+
 .p-1{
   padding: 0.25rem;
+}
+
+.p-5b{
+  padding: 5px;
 }
 
 .pt-10{
@@ -744,6 +768,22 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.pr-4{
+  padding-right: 1rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
+}
+
+.pt-2{
+  padding-top: 0.5rem;
+}
+
+.pb-2{
+  padding-bottom: 0.5rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -764,24 +804,12 @@ video {
   padding-right: 0.25rem;
 }
 
-.pb-2{
-  padding-bottom: 0.5rem;
-}
-
 .text-center{
   text-align: center;
 }
 
 .text-right{
   text-align: right;
-}
-
-.align-text-top{
-  vertical-align: text-top;
-}
-
-.align-text-bottom{
-  vertical-align: text-bottom;
 }
 
 .font-sans{
@@ -798,9 +826,9 @@ video {
   line-height: 1.5rem;
 }
 
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-xs{
@@ -808,9 +836,9 @@ video {
   line-height: 1rem;
 }
 
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-2xl{
@@ -838,8 +866,8 @@ video {
   line-height: 2.25rem;
 }
 
-.text-green{
-  color: rgba(15, 186, 83, 0.8);
+.text-green-bright{
+  color: rgba(15, 186, 83, 1);
 }
 
 .text-normal-black{
@@ -850,6 +878,11 @@ video {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.text-white-bg-article{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .text-gray{
   color: rgba(155, 155, 155, 1);
 }
@@ -857,6 +890,10 @@ video {
 .text-gray-light{
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
+}
+
+.text-green{
+  color: rgba(15, 186, 83, 0.8);
 }
 
 .shadow-list-shadow{
@@ -871,9 +908,34 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .header{
   width: 24rem;
   text-align: center;
+}
+
+.placeholder\:italic::-moz-placeholder{
+  font-style: italic;
+}
+
+.placeholder\:italic::placeholder{
+  font-style: italic;
+}
+
+.hover\:bg-green:hover{
+  background-color: rgba(15, 186, 83, 0.8);
+}
+
+.hover\:bg-dirt-yellow-light:hover{
+  background-color: rgba(212, 169, 17, 0.8);
+}
+
+.hover\:bg-red-light:hover{
+  background-color: rgba(212, 29, 17, 0.8);
 }
 
 .hover\:text-hover-black:hover{
@@ -882,6 +944,18 @@ video {
 
 .hover\:text-green-light:hover{
   color: rgba(15, 186, 83, 0.6);
+}
+
+.active\:bg-green-button:active{
+  background-color: rgba(12, 153, 68, 1);
+}
+
+.active\:bg-dirt-yellow-bright:active{
+  background-color: rgba(153, 122, 12, 1);
+}
+
+.active\:bg-red-bright:active{
+  background-color: rgba(153, 21, 12, 1);
 }
 
 .active\:text-black:active{
