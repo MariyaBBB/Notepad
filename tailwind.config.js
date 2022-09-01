@@ -11,12 +11,20 @@ module.exports = {
       maxHeight: {
         '40': '40px'
       },
+      minHeight:{
+        '320': '320px'
+      },
+      left: {
+        '204': '204px'
+      },
       padding: {
         '900': '900px'
       },
       colors: {
         'gray-light': '#F5F5F5',
-        'green': '#0FBA53',
+        'green': 'rgba(15, 186, 83, 0.8)',
+        'green-light': 'rgba(15, 186, 83, 0.6)',
+        'green-bright': 'rgba(15, 186, 83, 1)',
         'normal-black': 'rgba(0, 0, 0, 0.7)',
         'black-grey': 'rgba(0, 0, 0, 0.8)',
         'hover-black': 'rgba(0, 0, 0, 0.5)',
