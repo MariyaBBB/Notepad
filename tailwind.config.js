@@ -14,6 +14,9 @@ module.exports = {
       minHeight:{
         '280': '280px'
       },
+      minWidth: {
+        '90%': '90%'
+      },
       left: {
         '204': '204px'
       },
@@ -22,6 +25,7 @@ module.exports = {
       },
       colors: {
         'gray-light': '#F5F5F5',
+        'gray-bright': '#FAFAFA',
         'green': 'rgba(15, 186, 83, 0.8)',
         'green-light': 'rgba(15, 186, 83, 0.6)',
         'green-bright': 'rgba(15, 186, 83, 1)',
@@ -36,7 +40,7 @@ module.exports = {
         'dirt-yellow-bright': 'rgba(153, 122, 12, 1)',
         'red': 'rgba(212, 29, 17, 1)',
         'red-light': 'rgba(212, 29, 17, 0.8)',
-        'red-bright': 'rgba(153, 21, 12, 1)'
+        'red-bright': 'rgba(153, 21, 12, 1)',
       },
       fontFamily: {
         'sans': 'Roboto'
@@ -49,10 +53,13 @@ module.exports = {
       },
       boxShadow: {
         'black-shadow': '-.5rem 0px 0px 5px rgba(0, 0, 0, 1), .5rem 0px 0px 5px rgba(0, 0, 0, 1)',
-        'list-shadow': '-1.74rem 0px 0px 0px rgba(0, 0, 0, 1), 1.74rem 0px 0px 0px rgba(0, 0, 0, 1)',
       },
       padding: {
         '5b': '5px'
+      },
+      borderWidth: {
+        '1': '1px',
+        '20': '20px'
       }
     },
   },

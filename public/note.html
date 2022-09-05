@@ -1,88 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-    <link rel="stylesheet" href="dist/styles.css">
-</head>
-<body class="bg-gray-light font-sans relative">
-    <div class="max-w-960 m-auto pt-10">
-        <header class="grid grid-cols-2">
-            <a href="#" class="max-w-185 text-4xl text-green-bright font-medium">Блокнотик</a>
-            <menu class="max-w-fit grid grid-flow-col content-center justify-self-end gap-5">
-                <li>
-                    <a href="#" class="text-base text-normal-black active:text-black hover:text-hover-black">
-                        <img class="float-left p-1" src="images/icons/add.svg">
-                        Новая запись
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="text-base text-normal-black active:text-black hover:text-hover-black">
-                        <img class="float-left p-1" src="images/icons/note.svg">
-                        Список заметок
-                    </a>
-                    </li>
-            </menu>
-        </header>
-        <article class="mt-6">
-            <h1 class="ml-4 mr-2">
-                <span class="text-2xl leading-9 bg-black text-gray-light mt-5 shadow-black-shadow ">
-                    Начинаем изучение языка для профессионального и высшего программирования Dart
-                </span>
-            </h1>
-            <div class="bg-white-bg-article text-black-grey font-350 text-sm leading-6 pt-6 pr-7 pl-7 mt-6 rounded-lg space-y-5 pb-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sem erat, hendrerit sit amet consequat pulvinar, 
-                    mollis in tellus. Maecenas massa nisi, scelerisque et placerat ullamcorper, interdum et purus. Praesent et varius 
-                    nisl, nec mollis sapien. Ut consequat ante ex, ac pretium nisl elementum quis. Morbi eget nisl eu neque viverra 
-                    malesuada a quis lacus. In at odio tincidunt, fringilla mi et, ullamcorper arcu. Donec euismod, tortor non finibus 
-                    volutpat, tortor velit consectetur justo, id vestibulum turpis nibh accumsan ex. Curabitur sit amet elit euismod, 
-                    malesuada tortor in, eleifend justo. </p>
-                
-                <p>Aliquam sagittis, ligula eget blandit ullamcorper, purus erat lacinia justo, sit amet pretium massa eros id 
-                    nulla. Fusce volutpat turpis sit amet massa varius eleifend. Sed tempor enim at risus placerat vehicula. 
-                    Ut iaculis sem at dolor blandit consequat. Donec id massa ex. Sed tincidunt aliquam velit, vel pretium dui 
-                    tristique egestas. Pellentesque malesuada eget odio at commodo. Sed sed mi vel lectus ultricies semper. 
-                    Integer quis consectetur dolor. Phasellus tempor faucibus ex, vitae rutrum metus elementum eu. Phasellus 
-                    tincidunt lectus vulputate massa gravida, vitae aliquet velit efficitur. Curabitur lacus purus, mattis 
-                    sollicitudin pharetra in, ultricies sit amet mi. </p>
-                    
-                <p>Integer vel erat eu turpis placerat aliquet vel et lectus. Donec at nulla sit amet ante condimentum volutpat.
-                    Ut facilisis justo ac tristique vehicula. Vivamus vel dapibus nisl, eget consectetur leo. 
-                    Suspendisse malesuada fermentum tortor, at consequat urna pellentesque nec. Praesent sollicitudin consequat 
-                    tellus, non volutpat metus fringilla eu. Integer pulvinar risus nisi, eget semper elit dapibus at. 
-                    Proin ut augue nibh. Proin id consequat nulla. Curabitur fringilla, mauris vel mattis auctor, lectus 
-                    purus rhoncus tellus, sed imperdiet felis nulla sed urna. Maecenas pharetra suscipit leo at vehicula. 
-                    Nulla et suscipit eros. Fusce elementum rutrum mauris, eu tincidunt orci luctus non. Praesent elit nisl, 
-                    facilisis id pulvinar in, tincidunt sed mi. Sed mi libero, elementum id interdum et, commodo ullamcorper 
-                    nisl. Nam hendrerit in erat a egestas. </p>
+  <head>
+    <link rel="stylesheet" href="dist/styles.css" />
+  </head>
+  <body class="bg-gray-light font-sans relative">
+    <div class="max-w-960 sm:m-auto">
+      <header class="sm:grid sm:grid-cols-2 sm:m-auto sm:mt-10 mt-6 ml-5 mr-5">
+        <div class="grid grid-cols-2 ">
+        <a
+          href="note-list.html"
+          class="sm:max-w-185 sm:text-4xl text-2xl text-green-bright font-medium  sm:inline"
+          >Блокнотик</a
+        >
+        <img id="menu_button" class="sm:hidden justify-self-end cursor-pointer" src="images/icons/menu.svg" />
+        </div>
+        <menu src="images/icons/menu.svg"
+          class="sm:max-w-fit sm:grid sm:grid-flow-col sm:content-center sm:justify-self-end sm:gap-5 sm:mt-0 mt-7"
+        > 
+          <li
+            class="sm:border-none border-b-1 border-gray-light sm:bg-gray-light bg-white"
+          >
+            <a
+              href="new-note.html"
+              class="sm:pt-0 pt-4 pb-4 sm:pb-0 sm:pl-0 pl-4 block text-base text-normal-black active:text-black sm:hover:text-hover-black
+              active:bg-gray-bright"
+            >
+              <img class="float-left sm:m-1 sm:mr-1 mr-3 sm:w-auto sm:h-auto w-6 h-6" src="images/icons/add.svg" />
+              Новая запись
+            </a>
+          </li>
+          <li class=" sm:bg-gray-light bg-white">
+            <a
+              href="note-list.html"
+              class="sm:pt-0 pt-4 pb-4 sm:pl-0 pl-4 sm:pb-0 text-base block text-normal-black active:text-black sm:hover:text-hover-black
+              active:bg-gray-bright"
+            >
+              <img class="float-left sm:m-1 sm:mr-1 mr-3 sm:w-auto sm:h-auto w-6 h-6" src="images/icons/note.svg" />
+              Список заметок
+            </a>
+          </li>
+        </menu>
+      </header>
+      <article class="mt-6">
+        <h1 class="sm:ml-4 sm:mr-2 ">
+          <span
+            class="sm:text-2xl block  sm:inline text-base sm:leading-9 bg-black text-gray-light mt-5 sm:shadow-black-shadow sm:border-0
+            border-black border-20"
+          >
+            Начинаем изучение языка для профессионального и высшего
+            программирования Dart
+          </span>
+        </h1>
+        <div
+          class="bg-white-bg-article text-black-grey font-350 text-sm leading-6 pt-6 pr-7 pl-7 mt-6 rounded-lg space-y-5 pb-6"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sem
+            erat, hendrerit sit amet consequat pulvinar, mollis in tellus.
+            Maecenas massa nisi, scelerisque et placerat ullamcorper, interdum
+            et purus. Praesent et varius nisl, nec mollis sapien. Ut consequat
+            ante ex, ac pretium nisl elementum quis. Morbi eget nisl eu neque
+            viverra malesuada a quis lacus. In at odio tincidunt, fringilla mi
+            et, ullamcorper arcu. Donec euismod, tortor non finibus volutpat,
+            tortor velit consectetur justo, id vestibulum turpis nibh accumsan
+            ex. Curabitur sit amet elit euismod, malesuada tortor in, eleifend
+            justo.
+          </p>
 
-                <p>Morbi imperdiet mauris sed nisl lacinia elementum. Curabitur nec venenatis odio. Vivamus mauris ex, gravida 
-                    at pulvinar non, laoreet elementum enim. Pellentesque commodo erat vitae tellus pretium bibendum non at 
-                    nunc. Quisque vel leo at elit posuere fringilla ut quis enim. Cras ac lacinia erat. Duis ac justo interdum, 
-                    imperdiet sem eget, placerat mauris. Ut consectetur luctus neque nec ultrices. Fusce massa neque, tincidunt 
-                    quis iaculis a, ultricies sit amet ipsum. Pellentesque vel laoreet purus. </p>
+          <p>
+            Aliquam sagittis, ligula eget blandit ullamcorper, purus erat
+            lacinia justo, sit amet pretium massa eros id nulla. Fusce volutpat
+            turpis sit amet massa varius eleifend. Sed tempor enim at risus
+            placerat vehicula. Ut iaculis sem at dolor blandit consequat. Donec
+            id massa ex. Sed tincidunt aliquam velit, vel pretium dui tristique
+            egestas. Pellentesque malesuada eget odio at commodo. Sed sed mi vel
+            lectus ultricies semper. Integer quis consectetur dolor. Phasellus
+            tempor faucibus ex, vitae rutrum metus elementum eu. Phasellus
+            tincidunt lectus vulputate massa gravida, vitae aliquet velit
+            efficitur. Curabitur lacus purus, mattis sollicitudin pharetra in,
+            ultricies sit amet mi.
+          </p>
 
-                <p>Maecenas faucibus congue nisi, tincidunt suscipit tortor maximus nec. Cras at egestas nulla. Vivamus mattis 
-                    maximus neque, sit amet mollis turpis fringilla quis. Maecenas volutpat et magna nec congue. Praesent 
-                    justo sem, feugiat vitae lacinia non, facilisis vel nunc. Sed dignissim, urna in vulputate viverra, 
-                    nisi nibh interdum tortor, a eleifend quam mauris eu nibh. Quisque sodales ex magna, eget rhoncus libero 
-                    tristique eget. Vivamus finibus, orci nec pretium venenatis, urna tortor consequat arcu, at laoreet massa 
-                    odio id urna. </p>
-                
-                <div class="mt-8">
-                    <img class="float-left pt-1 pr-1" src="images/icons/calendar.svg">
-                    <span class="text-xs text-gray ">21 августа 2022г.</span>
-                </div>
-            </div>
-            <aside class="fixed top-52 left-52">
-                <a href=""><img class="bg-dirt-yellow rounded-md hover:bg-dirt-yellow-light active:bg-dirt-yellow-bright" src="images/icons/edit.svg"></a>
-                <a href=""><img class="mt-1 bg-red hover:bg-red-light active:bg-red-bright rounded-md" src="images/icons/delete.svg"></a>
-                <a href=""> <img class="p-5b mt-1 bg-green-bright rounded-md hover:bg-green active:bg-green-button" src="images/icons/add-button.svg"></a>
-            </aside>
-        </article>
-        <footer class=" mt-9 mb-9 text-center">
-            <span class="text-gray text-xs font-350">
-                2022 - Игорь Моисеев
-            </span>
-        </footer>
+          <p>
+            Integer vel erat eu turpis placerat aliquet vel et lectus. Donec at
+            nulla sit amet ante condimentum volutpat. Ut facilisis justo ac
+            tristique vehicula. Vivamus vel dapibus nisl, eget consectetur leo.
+            Suspendisse malesuada fermentum tortor, at consequat urna
+            pellentesque nec. Praesent sollicitudin consequat tellus, non
+            volutpat metus fringilla eu. Integer pulvinar risus nisi, eget
+            semper elit dapibus at. Proin ut augue nibh. Proin id consequat
+            nulla. Curabitur fringilla, mauris vel mattis auctor, lectus purus
+            rhoncus tellus, sed imperdiet felis nulla sed urna. Maecenas
+            pharetra suscipit leo at vehicula. Nulla et suscipit eros. Fusce
+            elementum rutrum mauris, eu tincidunt orci luctus non. Praesent elit
+            nisl, facilisis id pulvinar in, tincidunt sed mi. Sed mi libero,
+            elementum id interdum et, commodo ullamcorper nisl. Nam hendrerit in
+            erat a egestas.
+          </p>
+
+          <p>
+            Morbi imperdiet mauris sed nisl lacinia elementum. Curabitur nec
+            venenatis odio. Vivamus mauris ex, gravida at pulvinar non, laoreet
+            elementum enim. Pellentesque commodo erat vitae tellus pretium
+            bibendum non at nunc. Quisque vel leo at elit posuere fringilla ut
+            quis enim. Cras ac lacinia erat. Duis ac justo interdum, imperdiet
+            sem eget, placerat mauris. Ut consectetur luctus neque nec ultrices.
+            Fusce massa neque, tincidunt quis iaculis a, ultricies sit amet
+            ipsum. Pellentesque vel laoreet purus.
+          </p>
+
+          <p>
+            Maecenas faucibus congue nisi, tincidunt suscipit tortor maximus
+            nec. Cras at egestas nulla. Vivamus mattis maximus neque, sit amet
+            mollis turpis fringilla quis. Maecenas volutpat et magna nec congue.
+            Praesent justo sem, feugiat vitae lacinia non, facilisis vel nunc.
+            Sed dignissim, urna in vulputate viverra, nisi nibh interdum tortor,
+            a eleifend quam mauris eu nibh. Quisque sodales ex magna, eget
+            rhoncus libero tristique eget. Vivamus finibus, orci nec pretium
+            venenatis, urna tortor consequat arcu, at laoreet massa odio id
+            urna.
+          </p>
+
+          <div class="mt-8">
+            <img class="float-left pt-1 pr-1" src="images/icons/calendar.svg" />
+            <span class="text-xs text-gray">21 августа 2022г.</span>
+          </div>
+        </div>
+        <aside class="sm:fixed top-52 left-52 hidden sm:inline-block">
+          <a href=""
+            ><img
+              class="bg-dirt-yellow rounded-md hover:bg-dirt-yellow-light active:bg-dirt-yellow-bright"
+              src="images/icons/edit.svg"
+          /></a>
+          <a href=""
+            ><img
+              class="mt-1 bg-red hover:bg-red-light active:bg-red-bright rounded-md"
+              src="images/icons/delete.svg"
+          /></a>
+          <a href="new-note.html">
+            <img
+              class="p-5b mt-1 bg-green-bright rounded-md hover:bg-green active:bg-green-button"
+              src="images/icons/add-button.svg"
+          /></a>
+        </aside>
+      </article>
+      <footer class="mt-9 mb-9 text-center">
+        <span class="text-gray text-xs font-350"> 2022 - Игорь Моисеев </span>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
+
