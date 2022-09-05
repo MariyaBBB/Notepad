@@ -6,16 +6,16 @@
 <body class="bg-gray-light font-sans relative">
     <div class="max-w-960 m-auto pt-10">
         <header class="grid grid-cols-2">
-            <a href="#" class="max-w-185 text-4xl text-green-bright font-medium">Блокнотик</a>
-            <menu class="max-w-fit grid grid-flow-col content-center justify-self-end gap-5">
+            <a href="note-list.html" class="max-w-185 text-4xl text-green-bright font-medium">Блокнотик</a>
+            <menu class="gap-5">
                 <li>
-                    <a href="#" class="text-base text-normal-black active:text-black hover:text-hover-black ">
+                    <a href="new-note.html" class="block w-full h-full text-base text-normal-black active:text-black hover:text-hover-black ">
                         <img class="float-left p-1" src="images/icons/add.svg">
                         Новая запись
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="text-base text-normal-black active:text-black hover:text-hover-black">
+                    <a href="note-list.html" class="text-base text-normal-black active:text-black hover:text-hover-black">
                         <img class="float-left p-1" src="images/icons/note.svg">
                         Список заметок
                     </a>
@@ -44,7 +44,7 @@
 </body>
 </html>
 <script>
-var textarea = document.getElementsByTagName('textarea')[0];
+const textarea = document.getElementsByTagName('textarea')[0];
 
 textarea.addEventListener('keydown', resize);
 
