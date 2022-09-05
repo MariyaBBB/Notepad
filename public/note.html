@@ -12,10 +12,11 @@
           class="sm:max-w-185 sm:text-4xl text-2xl text-green-bright font-medium  sm:inline"
           >Блокнотик</a
         >
-        <img id="menu_button" class="sm:hidden justify-self-end cursor-pointer" src="images/icons/menu.svg" />
+        <img id="menu_button" onclick="openOrClose()" class="sm:hidden justify-self-end cursor-pointer" src="images/icons/menu.svg" />
         </div>
         <menu src="images/icons/menu.svg"
-          class="sm:max-w-fit sm:grid sm:grid-flow-col sm:content-center sm:justify-self-end sm:gap-5 sm:mt-0 mt-7"
+          class="sm:max-w-fit sm:grid sm:grid-flow-col sm:content-center sm:justify-self-end sm:gap-5 sm:mt-0 mt-7
+          "
         > 
           <li
             class="sm:border-none border-b-1 border-gray-light sm:bg-gray-light bg-white"
@@ -150,4 +151,10 @@
     </div>
   </body>
 </html>
+<script> 
+    const menu = document.getElementsByTagName('menu')[0];
 
+    function openOrClose() {
+        menu.hidden = menu.hidden ? false : true;
+    }
+</script>
