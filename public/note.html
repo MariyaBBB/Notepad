@@ -12,10 +12,10 @@
           class="sm:max-w-185 sm:text-4xl text-2xl text-green-bright font-medium  sm:inline"
           >Блокнотик</a
         >
-        <img id="menu_button" onclick="openOrClose()" class="sm:hidden justify-self-end cursor-pointer" src="images/icons/menu.svg" />
+        <img id="menu_button" onclick="openOrClose(this)" class="sm:hidden justify-self-end cursor-pointer" src="images/icons/menu.svg" />
         </div>
-        <menu src="images/icons/menu.svg"
-          class="sm:max-w-fit sm:grid sm:grid-flow-col sm:content-center sm:justify-self-end sm:gap-5 sm:mt-0 mt-7
+        <menu 
+          class="sm:max-w-fit sm:grid sm:grid-flow-col hidden sm:content-center sm:justify-self-end sm:gap-5 sm:mt-0 mt-7
           "
         > 
           <li
@@ -45,7 +45,7 @@
       <article class="mt-6">
         <h1 class="sm:ml-4 sm:mr-2 ">
           <span
-            class="sm:text-2xl block  sm:inline text-base sm:leading-9 bg-black text-gray-light mt-5 sm:shadow-black-shadow sm:border-0
+            class="sm:text-2xl block  sm:inline text-lg sm:leading-9 bg-black text-gray-light mt-5 sm:shadow-black-shadow sm:border-0
             border-black border-20"
           >
             Начинаем изучение языка для профессионального и высшего
@@ -154,7 +154,16 @@
 <script> 
     const menu = document.getElementsByTagName('menu')[0];
 
-    function openOrClose() {
-        menu.hidden = menu.hidden ? false : true;
+    function openOrClose(e) {
+        if(menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+          e.src = 'images/icons/menu-close.svg';
+        } else {
+          menu.classList.add('hidden');
+          e.src = 'images/icons/menu.svg';
+        }
+
+        // menu.hidden = menu.hidden ? (false, console.log(e.src='images/icons/menu-close.svg')): (true, e.src = 'images/icons/menu.svg');
+        
     }
 </script>

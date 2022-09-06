@@ -553,12 +553,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.fixed{
-  position: fixed;
-}
-
-.absolute{
-  position: absolute;
+.invisible{
+  visibility: hidden;
 }
 
 .relative{
@@ -571,22 +567,6 @@ video {
 
 .left-52{
   left: 13rem;
-}
-
-.top-\[-400px\]{
-  top: -400px;
-}
-
-.top-96{
-  top: 24rem;
-}
-
-.top-\[80px\]{
-  top: 80px;
-}
-
-.z-\[-1\]{
-  z-index: -1;
 }
 
 .float-right{
@@ -603,10 +583,6 @@ video {
 
 .m-auto{
   margin: auto;
-}
-
-.m-1{
-  margin: 0.25rem;
 }
 
 .mt-6{
@@ -637,12 +613,8 @@ video {
   margin-top: 1.75rem;
 }
 
-.ml-4{
-  margin-left: 1rem;
-}
-
-.mr-2{
-  margin-right: 0.5rem;
+.mr-3{
+  margin-right: 0.75rem;
 }
 
 .mt-5{
@@ -657,12 +629,16 @@ video {
   margin-top: 0.25rem;
 }
 
-.mr-3{
-  margin-right: 0.75rem;
-}
-
 .block{
   display: block;
+}
+
+.inline{
+  display: inline;
+}
+
+.flex{
+  display: flex;
 }
 
 .grid{
@@ -687,18 +663,6 @@ video {
   height: 1.5rem;
 }
 
-.h-9{
-  height: 2.25rem;
-}
-
-.h-7{
-  height: 1.75rem;
-}
-
-.h-8{
-  height: 2rem;
-}
-
 .min-h-280{
   min-height: 280px;
 }
@@ -709,22 +673,6 @@ video {
 
 .w-6{
   width: 1.5rem;
-}
-
-.w-7{
-  width: 1.75rem;
-}
-
-.w-8{
-  width: 2rem;
-}
-
-.w-9{
-  width: 2.25rem;
-}
-
-.w-10{
-  width: 2.5rem;
 }
 
 .min-w-full{
@@ -743,23 +691,6 @@ video {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-}
-
-@-webkit-keyframes spin{
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin{
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin{
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
 }
 
 .cursor-pointer{
@@ -884,14 +815,6 @@ video {
   padding: 5px;
 }
 
-.p-0{
-  padding: 0px;
-}
-
-.p-3{
-  padding: 0.75rem;
-}
-
 .pt-10{
   padding-top: 2.5rem;
 }
@@ -948,20 +871,8 @@ video {
   padding-right: 0.25rem;
 }
 
-.pt-5{
-  padding-top: 1.25rem;
-}
-
-.pb-5{
-  padding-bottom: 1.25rem;
-}
-
 .pb-4{
   padding-bottom: 1rem;
-}
-
-.pr-3{
-  padding-right: 0.75rem;
 }
 
 .text-center{
@@ -1004,6 +915,11 @@ video {
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-medium{
@@ -1052,51 +968,9 @@ video {
   color: rgba(15, 186, 83, 0.8);
 }
 
-.opacity-0{
-  opacity: 0;
-}
-
-.opacity-100{
-  opacity: 1;
-}
-
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.transition-all{
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-transform{
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-opacity{
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.delay-300{
-  transition-delay: 300ms;
-}
-
-.duration-500{
-  transition-duration: 500ms;
-}
-
-.ease-in-out{
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.ease-in{
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .header{
@@ -1179,16 +1053,16 @@ video {
     margin-top: 0px;
   }
 
+  .sm\:mr-1{
+    margin-right: 0.25rem;
+  }
+
   .sm\:ml-4{
     margin-left: 1rem;
   }
 
   .sm\:mr-2{
     margin-right: 0.5rem;
-  }
-
-  .sm\:mr-1{
-    margin-right: 0.25rem;
   }
 
   .sm\:inline-block{
@@ -1199,10 +1073,6 @@ video {
     display: inline;
   }
 
-  .sm\:flex{
-    display: flex;
-  }
-
   .sm\:grid{
     display: grid;
   }
@@ -1211,16 +1081,8 @@ video {
     display: none;
   }
 
-  .sm\:h-4{
-    height: 1rem;
-  }
-
   .sm\:h-auto{
     height: auto;
-  }
-
-  .sm\:w-4{
-    width: 1rem;
   }
 
   .sm\:w-auto{
@@ -1282,14 +1144,6 @@ video {
     padding-left: 0px;
   }
 
-  .sm\:pr-0{
-    padding-right: 0px;
-  }
-
-  .sm\:pr-1{
-    padding-right: 0.25rem;
-  }
-
   .sm\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1312,15 +1166,5 @@ video {
 
   .sm\:hover\:text-hover-black:hover{
     color: rgba(0, 0, 0, 0.5);
-  }
-}
-
-@media (min-width: 768px){
-  .md\:z-auto{
-    z-index: auto;
-  }
-
-  .md\:opacity-100{
-    opacity: 1;
   }
 }
