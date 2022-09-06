@@ -553,10 +553,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.invisible{
-  visibility: hidden;
-}
-
 .relative{
   position: relative;
 }
@@ -631,14 +627,6 @@ video {
 
 .block{
   display: block;
-}
-
-.inline{
-  display: inline;
-}
-
-.flex{
-  display: flex;
 }
 
 .grid{
@@ -966,6 +954,12 @@ video {
 
 .text-green{
   color: rgba(15, 186, 83, 0.8);
+}
+
+.shadow-list-shadow{
+  --tw-shadow: -1.74rem 0px 0px 0px rgba(0, 0, 0, 1), 1.74rem 0px 0px 0px rgba(0, 0, 0, 1);;
+  --tw-shadow-colored: -1.74rem 0px 0px 0px var(--tw-shadow-color), 1.74rem 0px 0px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline-none{

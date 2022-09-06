@@ -53,6 +53,7 @@ module.exports = {
       },
       boxShadow: {
         'black-shadow': '-.5rem 0px 0px 5px rgba(0, 0, 0, 1), .5rem 0px 0px 5px rgba(0, 0, 0, 1)',
+        'list-shadow': '-1.74rem 0px 0px 0px rgba(0, 0, 0, 1), 1.74rem 0px 0px 0px rgba(0, 0, 0, 1);'
       },
       padding: {
         '5b': '5px'
