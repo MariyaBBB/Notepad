@@ -60,7 +60,9 @@ module.exports = {
       },
       borderWidth: {
         '1': '1px',
-        '20': '20px'
+        '20': '20px',
+        '10': '10px',
+        '28': '28px'
       }
     },
   },

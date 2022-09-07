@@ -4,89 +4,130 @@
     <link rel="stylesheet" href="dist/styles.css">
 </head>
 <body class="bg-gray-light font-sans">
-    <div class="max-w-960 m-auto pt-10">
-        <header class="grid grid-cols-2">
-            <a href="note-list.html" class="max-w-185 text-4xl text-green-bright font-medium ">Блокнотик</a>
-            <menu class="max-w-fit grid grid-flow-col content-center justify-self-end gap-5">
-                <li>
-                    <a href="new-note.html" class="text-base text-normal-black active:text-black hover:text-hover-black">
-                        <img class="float-left p-1" src="images/icons/add.svg">
-                        Новая запись
-                    </a>
-                </li>
-                <li>
-                    <a href="note-list.html" class="text-base text-normal-black active:text-black hover:text-hover-black">
-                        <img class="float-left p-1" src="images/icons/note.svg">
-                        Список заметок
-                    </a>
-                    </li>
-            </menu>
+    <div class="max-w-960 sm:m-auto">
+        <header class="sm:grid sm:grid-cols-2 sm:m-auto sm:mt-10 mt-6 ml-5 mr-5">
+            <div class="grid grid-cols-2 ">
+                <a
+                  href="note-list.html"
+                  class="sm:max-w-185 sm:text-4xl text-3xl text-green-bright font-medium  sm:inline"
+                  >Блокнотик</a
+                >
+                <img id="menu_button" onclick="openOrClose(this)" class="sm:hidden justify-self-end cursor-pointer" src="images/icons/menu.svg" />
+            </div>
+            <menu 
+          class="sm:max-w-fit sm:grid sm:grid-flow-col hidden sm:content-center sm:justify-self-end sm:gap-5 sm:mt-0 mt-7
+          "
+        > 
+          <li
+            class="rounded-t-md sm:rounded-none sm:border-none border-b-1 border-gray-light sm:bg-gray-light bg-white"
+          >
+            <a
+              href="new-note.html"
+              class="sm:pt-0 pt-4 pb-4 sm:pb-0 sm:pl-0 pl-4 block text-base text-normal-black active:text-black sm:hover:text-hover-black
+              active:bg-gray-bright"
+            >
+              <img class="float-left sm:m-1 sm:mr-1 mr-3 sm:w-auto sm:h-auto w-6 h-6" src="images/icons/add.svg" />
+              Новая запись
+            </a>
+          </li>
+          <li class="rounded-b-md sm:rounded-none sm:bg-gray-light bg-white">
+            <a
+              href="note-list.html"
+              class="sm:pt-0 pt-4 pb-4 sm:pl-0 pl-4 sm:pb-0 text-base block text-normal-black active:text-black sm:hover:text-hover-black
+              active:bg-gray-bright"
+            >
+              <img class="float-left sm:m-1 sm:mr-1 mr-3 sm:w-auto sm:h-auto w-6 h-6" src="images/icons/note.svg" />
+              Список заметок
+            </a>
+          </li>
+        </menu>
         </header>
-        <article class=" bg-white-bg-article text-black-grey font-350 text-sm leading-6 pt-4 pr-7 pl-7 mt-6 rounded-lg space-y-3 pb-6">
-            <h1 class=" overflow-auto pr-0 pl-0 text-xl bg-black text-gray-light mt-0 grid-cols-1 shadow-list-shadow leading-10"> Начинаем изучение языка для профессионального и высшего программирования Dart
+        <article class=" bg-white-bg-article sm:text-black-grey font-350 text-sm leading-6 sm:pt-4 pt-5 sm:pr-7 pr-0 sm:pl-7 pl-4 sm:pb-6 pb-5
+        mt-4 sm:mt-6 sm:rounded-lg rounded-r-lg space-y-3 sm:mr-0 mr-5 ml-5 sm:ml-0 sm:border-none border-l-2 border-green-bright 
+        active:border-black">
+            <h1 class="bg-white-bg-article text-normal-black overflow-auto pr-0 pl-0 sm:text-xl text-lg sm:bg-black sm:text-gray-light mt-0 grid-cols-1 
+            sm:shadow-list-shadow sm:pt-2 sm:pb-2 leading-6 font-normal"> 
+                <a href="#" class="block" >
+                    Первая программа на языке Dart
+                </a>
             </h1>
+            <div class="hidden sm:inline">
                 <div class="pt-4 ">
-                     <img class="float-left pt-1 pr-1" src="images/icons/calendar.svg">
+                    <img class="float-left pt-1 pr-1" src="images/icons/calendar.svg">
                             <span class="text-xs text-gray  ">21 августа 2022г.</span>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sem erat, hendrerit sit amet consequat pulvinar, 
-                    mollis in tellus. Maecenas massa nisi, scelerisque et placerat ullamcorper, interdum et purus. Praesent et varius 
-                    nisl, nec mollis sapien. Ut consequat ante ex, ac pretium nisl elementum quis. Morbi eget nisl eu neque viverra 
-                    malesuada a quis lacus. In at odio tincidunt, fringilla mi et, ullamcorper arcu. Donec euismod, tortor non finibus 
-                    volutpat, tortor velit consectetur justo, id vestibulum turpis nibh accumsan ex. Curabitur sit amet elit euismod, 
-                    malesuada tortor in, eleifend justo. </p>    
+                        mollis in tellus. Maecenas massa nisi, scelerisque et placerat ullamcorper, interdum et purus. Praesent et varius 
+                        nisl, nec mollis sapien. Ut consequat ante ex, ac pretium nisl elementum quis. Morbi eget nisl eu neque viverra 
+                        malesuada a quis lacus. In at odio tincidunt, fringilla mi et, ullamcorper arcu. Donec euismod, tortor non finibus 
+                        volutpat, tortor velit consectetur justo, id vestibulum turpis nibh accumsan ex. Curabitur sit amet elit euismod, 
+                        malesuada tortor in, eleifend justo. </p>    
                 <div class="text-right grid grid-cols-1 pb-2"> 
                     <a href="note.html" class="grid grid-flow-col justify-self-end text-green active:text-green-bright hover:text-green-light"> 
                         
                         <span class="pr-1">Подробнее </span> 
                         <img class="float-right clear-none pt-1" src="images/icons/details.svg">
                     </a> 
-                </div>           
-
+                </div>   
+            </div>        
         </article>
-        <article class=" bg-white-bg-article text-black-grey font-350 text-sm leading-6 pt-4 pr-7 pl-7 mt-6 rounded-lg space-y-3 pb-6">
-            <h1 class=" overflow-auto pr-0 pl-0 text-xl bg-black text-gray-light mt-0 grid-cols-1 shadow-list-shadow leading-10"> Начинаем изучение языка для профессионального и высшего программирования Dart
+        <article class=" bg-white-bg-article sm:text-black-grey font-350 text-sm leading-6 sm:pt-4 pt-5 sm:pr-7 pr-0 sm:pl-7 pl-4 sm:pb-6 pb-5
+        mt-4 sm:mt-6 sm:rounded-lg rounded-r-lg space-y-3 sm:mr-0 mr-5 ml-5 sm:ml-0 sm:border-none border-l-2 border-green-bright 
+        active:border-black">
+            <h1 class="bg-white-bg-article text-normal-black overflow-auto pr-0 pl-0 sm:text-xl text-lg sm:bg-black sm:text-gray-light mt-0 grid-cols-1 
+            sm:shadow-list-shadow sm:pt-2 sm:pb-2 leading-6 font-normal"> 
+                <a href="#" class="block" >
+                    Начинаем изучение языка для профессионального и высшего программирования Dart
+                </a>
             </h1>
+            <div class="hidden sm:inline">
                 <div class="pt-4 ">
-                     <img class="float-left pt-1 pr-1" src="images/icons/calendar.svg">
+                    <img class="float-left pt-1 pr-1" src="images/icons/calendar.svg">
                             <span class="text-xs text-gray  ">21 августа 2022г.</span>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sem erat, hendrerit sit amet consequat pulvinar, 
-                    mollis in tellus. Maecenas massa nisi, scelerisque et placerat ullamcorper, interdum et purus. Praesent et varius 
-                    nisl, nec mollis sapien. Ut consequat ante ex, ac pretium nisl elementum quis. Morbi eget nisl eu neque viverra 
-                    malesuada a quis lacus. In at odio tincidunt, fringilla mi et, ullamcorper arcu. Donec euismod, tortor non finibus 
-                    volutpat, tortor velit consectetur justo, id vestibulum turpis nibh accumsan ex. Curabitur sit amet elit euismod, 
-                    malesuada tortor in, eleifend justo. </p>    
+                        mollis in tellus. Maecenas massa nisi, scelerisque et placerat ullamcorper, interdum et purus. Praesent et varius 
+                        nisl, nec mollis sapien. Ut consequat ante ex, ac pretium nisl elementum quis. Morbi eget nisl eu neque viverra 
+                        malesuada a quis lacus. In at odio tincidunt, fringilla mi et, ullamcorper arcu. Donec euismod, tortor non finibus 
+                        volutpat, tortor velit consectetur justo, id vestibulum turpis nibh accumsan ex. Curabitur sit amet elit euismod, 
+                        malesuada tortor in, eleifend justo. </p>    
                 <div class="text-right grid grid-cols-1 pb-2"> 
                     <a href="note.html" class="grid grid-flow-col justify-self-end text-green active:text-green-bright hover:text-green-light"> 
                         
                         <span class="pr-1">Подробнее </span> 
                         <img class="float-right clear-none pt-1" src="images/icons/details.svg">
                     </a> 
-                </div>           
-
+                </div>   
+            </div>        
         </article>
-        <article class=" bg-white-bg-article text-black-grey font-350 text-sm leading-6 pt-4 pr-7 pl-7 mt-6 rounded-lg space-y-3 pb-6">
-            <h1 class=" overflow-auto pr-0 pl-0 text-xl bg-black text-gray-light mt-0 grid-cols-1 shadow-list-shadow leading-10"> Начинаем изучение языка для профессионального и высшего программирования Dart
+        <article class=" bg-white-bg-article sm:text-black-grey font-350 text-sm leading-6 sm:pt-4 pt-5 sm:pr-7 pr-0 sm:pl-7 pl-4 sm:pb-6 pb-5
+        mt-4 sm:mt-6 sm:rounded-lg rounded-r-lg sm:space-y-3 sm:mr-0 mr-5 ml-5 sm:ml-0 sm:border-none border-l-2 border-green-bright 
+        active:border-black">
+            <h1 class="bg-white-bg-article text-normal-black overflow-auto pr-0 pl-0 sm:text-xl text-lg sm:bg-black sm:text-gray-light mt-0 grid-cols-1 
+            sm:shadow-list-shadow sm:pt-2 sm:pb-2 leading-6 font-normal">  
+                <a href="#" class="w-full h-full block ">
+                    Первая программа на языке Dart
+                </a>
             </h1>
+            <div class="hidden sm:inline">
                 <div class="pt-4 ">
-                     <img class="float-left pt-1 pr-1" src="images/icons/calendar.svg">
+                    <img class="float-left pt-1 pr-1" src="images/icons/calendar.svg">
                             <span class="text-xs text-gray  ">21 августа 2022г.</span>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sem erat, hendrerit sit amet consequat pulvinar, 
-                    mollis in tellus. Maecenas massa nisi, scelerisque et placerat ullamcorper, interdum et purus. Praesent et varius 
-                    nisl, nec mollis sapien. Ut consequat ante ex, ac pretium nisl elementum quis. Morbi eget nisl eu neque viverra 
-                    malesuada a quis lacus. In at odio tincidunt, fringilla mi et, ullamcorper arcu. Donec euismod, tortor non finibus 
-                    volutpat, tortor velit consectetur justo, id vestibulum turpis nibh accumsan ex. Curabitur sit amet elit euismod, 
-                    malesuada tortor in, eleifend justo. </p>    
+                        mollis in tellus. Maecenas massa nisi, scelerisque et placerat ullamcorper, interdum et purus. Praesent et varius 
+                        nisl, nec mollis sapien. Ut consequat ante ex, ac pretium nisl elementum quis. Morbi eget nisl eu neque viverra 
+                        malesuada a quis lacus. In at odio tincidunt, fringilla mi et, ullamcorper arcu. Donec euismod, tortor non finibus 
+                        volutpat, tortor velit consectetur justo, id vestibulum turpis nibh accumsan ex. Curabitur sit amet elit euismod, 
+                        malesuada tortor in, eleifend justo. </p>    
                 <div class="text-right grid grid-cols-1 pb-2"> 
                     <a href="note.html" class="grid grid-flow-col justify-self-end text-green active:text-green-bright hover:text-green-light"> 
                         
                         <span class="pr-1">Подробнее </span> 
                         <img class="float-right clear-none pt-1" src="images/icons/details.svg">
                     </a> 
-                </div>           
-
+                </div>   
+            </div>        
         </article>
         
         <footer class=" mt-9 mb-9 text-center">
@@ -97,3 +138,16 @@
     </div>
 </body>
 </html>
+<script> 
+    const menu = document.getElementsByTagName('menu')[0];
+
+    function openOrClose(e) {
+        if(menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+          e.src = 'images/icons/menu-close.svg';
+        } else {
+          menu.classList.add('hidden');
+          e.src = 'images/icons/menu.svg';
+        }
+    }
+</script>
