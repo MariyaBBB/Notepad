@@ -9,7 +9,7 @@
         <div class="grid grid-cols-2 ">
         <a
           href="note-list.html"
-          class="sm:max-w-185 sm:text-4xl text-2xl text-green-bright font-medium  sm:inline"
+          class="sm:max-w-185 sm:text-4xl text-3xl text-green-bright font-medium  sm:inline"
           >Блокнотик</a
         >
         <img id="menu_button" onclick="openOrClose(this)" class="sm:hidden justify-self-end cursor-pointer" src="images/icons/menu.svg" />
@@ -19,7 +19,7 @@
           "
         > 
           <li
-            class="sm:border-none border-b-1 border-gray-light sm:bg-gray-light bg-white"
+            class="rounded-t-md sm:rounded-none sm:border-none border-b-1 border-gray-light sm:bg-gray-light bg-white"
           >
             <a
               href="new-note.html"
@@ -30,7 +30,7 @@
               Новая запись
             </a>
           </li>
-          <li class=" sm:bg-gray-light bg-white">
+          <li class="rounded-b-md sm:rounded-none sm:bg-gray-light bg-white">
             <a
               href="note-list.html"
               class="sm:pt-0 pt-4 pb-4 sm:pl-0 pl-4 sm:pb-0 text-base block text-normal-black active:text-black sm:hover:text-hover-black
@@ -162,8 +162,5 @@
           menu.classList.add('hidden');
           e.src = 'images/icons/menu.svg';
         }
-
-        // menu.hidden = menu.hidden ? (false, console.log(e.src='images/icons/menu-close.svg')): (true, e.src = 'images/icons/menu.svg');
-        
     }
 </script>
