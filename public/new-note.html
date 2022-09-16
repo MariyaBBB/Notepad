@@ -4,35 +4,58 @@
     <link rel="stylesheet" href="dist/styles.css">
 </head>
 <body class="bg-gray-light font-sans relative">
-    <div class="max-w-960 m-auto pt-10">
-        <header class="grid grid-cols-2">
-            <a href="note-list.html" class="max-w-185 text-4xl text-green-bright font-medium">Блокнотик</a>
-            <menu class="gap-5">
-                <li>
-                    <a href="new-note.html" class="block w-full h-full text-base text-normal-black active:text-black hover:text-hover-black ">
-                        <img class="float-left p-1" src="images/icons/add.svg">
-                        Новая запись
-                    </a>
-                </li>
-                <li>
-                    <a href="note-list.html" class="text-base text-normal-black active:text-black hover:text-hover-black">
-                        <img class="float-left p-1" src="images/icons/note.svg">
-                        Список заметок
-                    </a>
-                    </li>
-            </menu>
+    <div class="max-w-960 sm:m-auto">
+        <header class="sm:grid sm:grid-cols-2 sm:m-auto sm:mt-10 mt-6 ml-5 mr-5">
+            <div class="grid grid-cols-2 ">
+                <a
+                  href="note-list.html"
+                  class="sm:max-w-185 sm:text-4xl text-3xl text-green-bright font-medium  sm:inline"
+                  >Блокнотик</a
+                >
+                <img id="menu_button" onclick="openOrClose(this)" class="sm:hidden justify-self-end cursor-pointer" src="images/icons/menu.svg" />
+            </div>
+            <menu 
+          class="sm:max-w-fit sm:grid sm:grid-flow-col hidden sm:content-center sm:justify-self-end sm:gap-5 sm:mt-0 mt-7
+          "
+        > 
+          <li
+            class="rounded-t-md sm:rounded-none sm:border-none border-b-1 border-gray-light sm:bg-gray-light bg-white"
+          >
+            <a
+              href="new-note.html"
+              class="sm:pt-0 pt-4 pb-4 sm:pb-0 sm:pl-0 pl-4 block text-base text-normal-black active:text-black sm:hover:text-hover-black
+              active:bg-gray-bright"
+            >
+              <img class="float-left sm:m-1 sm:mr-1 mr-3 sm:w-auto sm:h-auto w-6 h-6" src="images/icons/add.svg" />
+              Новая запись
+            </a>
+          </li>
+          <li class="rounded-b-md sm:rounded-none sm:bg-gray-light bg-white">
+            <a
+              href="note-list.html"
+              class="sm:pt-0 pt-4 pb-4 sm:pl-0 pl-4 sm:pb-0 text-base block text-normal-black active:text-black sm:hover:text-hover-black
+              active:bg-gray-bright"
+            >
+              <img class="float-left sm:m-1 sm:mr-1 mr-3 sm:w-auto sm:h-auto w-6 h-6" src="images/icons/note.svg" />
+              Список заметок
+            </a>
+          </li>
+        </menu>
         </header>
-        <article class="mt-6">
+        <article class="mt-6 sm:mr-0 mr-5 ml-5 sm:ml-0 ">
             <div class="bg-white-bg-article text-black-grey font-350 leading-6 pt-6 pr-7 
             pl-7 mt-6 rounded-lg space-y-5 pb-6">
-                <input class="min-w-full text-xl placeholder:italic outline-none" placeholder="Заголовок"> 
-                <textarea class="min-h-280 min-w-full placeholder:italic resize-none outline-none h-max " placeholder="Содержимое заметки"></textarea>           
-                <div class="grid grid-cols-1 ">
-                    <button class="grid grid-flow-col justify-self-end bg-green-bright text-white-bg-article pr-4 pl-4 pt-2 pb-2 rounded-md hover:bg-green active:bg-green-button  "> 
-                        <img class="float-left p-1" src="images/icons/add-button.svg">Добавить
-                    </button>
-                </div>
+                <input class="min-w-full sm:text-xl text-base placeholder:italic outline-none" placeholder="Заголовок"> 
+                <textarea class="min-h-280 min-w-full placeholder:italic resize-none outline-none h-max text-sm sm:text-base" placeholder="Содержимое заметки"></textarea>           
             </div>
+            <div class="grid grid-cols-1 sm:mt-[-67px] sm:mr-7 mt-6 text-base sm:text-sm">
+                <button class="sm:grid sm:grid-flow-col sm:justify-self-end bg-green-bright text-white-bg-article pr-4 pl-4 pt-2 pb-2 rounded-md 
+                sm:hover:bg-green active:bg-green-button block 
+                     "> 
+                    <img class="sm:float-left inline sm:p-0.5 p-1  sm:mr-2 mr-2" src="images/icons/add-button.svg">Добавить
+                </button>
+            </div>
+            
             
         </article>
         <footer class=" mt-9 mb-9 text-center">
@@ -59,4 +82,15 @@ function resize() {
     textarea.style.height = calcHeight(textarea.value) + "px";
 }
 
+const menu = document.getElementsByTagName('menu')[0];
+
+function openOrClose(e) {
+    if(menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        e.src = 'images/icons/menu-close.svg';
+    } else {
+        menu.classList.add('hidden');
+        e.src = 'images/icons/menu.svg';
+    }
+}
 </script>
