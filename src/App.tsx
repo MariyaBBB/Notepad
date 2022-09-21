@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import './index.css';
 import NewPost from './pages/NewPost';
@@ -17,6 +18,7 @@ function App() {
           <Route path='/new-post' element={<NewPost />}>
          </Route>
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
