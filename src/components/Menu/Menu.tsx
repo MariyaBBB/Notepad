@@ -9,7 +9,7 @@ const Menu = () => {
     >
       {menuElements.map((item: IMenuItem) => (
         <MenuElement
-          key={item.name}
+          key={item.link}
           icon={item.icon}
           name={item.name}
           link={item.link}

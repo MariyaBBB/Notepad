@@ -10,12 +10,12 @@ export interface IMenuItem {
 export const menuElements: IMenuItem[] = [
   {
     name: "Новая запись",
-    link: "",
+    link: "/new-post",
     icon: AddIcon.toString(),
   },
   {
     name: "Список заметок",
-    link: "",
+    link: "/posts",
     icon: NoteIcon.toString(),
   },
 ];

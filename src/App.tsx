@@ -1,13 +1,24 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import './index.css';
+import NewPost from './pages/NewPost';
+import Posts from './pages/Posts'
 
 function App() {
   return (
-    <div className='max-w-960 sm:m-auto '>
-      <Header></Header>
-      
-    </div>
+    <BrowserRouter> 
+      <div className='max-w-960 sm:m-auto '>
+        <Header />
+        <Routes>
+          <Route path='/posts' element={<Posts />}>
+          </Route>
+
+          <Route path='/new-post' element={<NewPost />}>
+         </Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
