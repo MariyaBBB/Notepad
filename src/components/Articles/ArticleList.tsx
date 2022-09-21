@@ -11,7 +11,7 @@ const ArticleList = () => {
             <Article 
                 key={article.name}
                 name={article.name}
-                body={article.body}
+                description={article.description}
                 date={article.date}
                 />
             </div>

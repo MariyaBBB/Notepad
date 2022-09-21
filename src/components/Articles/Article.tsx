@@ -1,11 +1,11 @@
 import React from "react";
 interface IArticleItemProps {
     name: string,
-    body: string,
+    description: string,
     date: string
 }
 
-const Article = ({name, body, date}: IArticleItemProps) => {
+const Article = ({name, description, date}: IArticleItemProps) => {
     return (
         <article className=" bg-white-bg-article sm:text-black-grey font-350 text-sm leading-6 sm:pt-4 pt-5 sm:pr-7 pr-0 sm:pl-7 pl-4 sm:pb-6 pb-5
         mt-4 sm:mt-6 sm:rounded-lg rounded-r-lg sm:space-y-3 sm:mr-0 mr-5 ml-5 sm:ml-0 sm:border-none border-l-2 border-green-bright 
@@ -21,7 +21,7 @@ const Article = ({name, body, date}: IArticleItemProps) => {
                     <img className="float-left pt-1 pr-1" alt='' src="images/icons/calendar.svg" />
                             <span className="text-xs text-gray  ">{date}</span>
                 </div>
-                <p>{body} </p>    
+                <p>{description} </p>    
                 <div className="text-right grid grid-cols-1 pb-2"> 
                     <a href="note.html" className="grid grid-flow-col justify-self-end text-green active:text-green-bright hover:text-green-light"> 
                         
