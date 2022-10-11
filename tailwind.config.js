@@ -9,10 +9,12 @@ module.exports = {
         '730': '730px'
       },
       maxHeight: {
-        '40': '40px'
+        '40': '40px',
+        '105': '105px'
       },
       minHeight:{
-        '280': '280px'
+        '280': '280px',
+        
       },
       minWidth: {
         '90%': '90%'

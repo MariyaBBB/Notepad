@@ -8,3 +8,29 @@ body {
   @apply bg-gray-light font-sans relative;
 }
 
+h1 {
+ @apply text-xl font-normal  
+}
+
+div {
+@apply text-black
+}
+
+.ce-paragraph[data-placeholder]:empty::before {
+  @apply italic text-base
+}
+
+.ce-header[data-placeholder]:empty::before {
+  @apply italic
+}
+
+.ce-block__content, 
+.ce-toolbar__content {
+  @apply max-w-full pl-5
+}
+
+
+
+
+
+
