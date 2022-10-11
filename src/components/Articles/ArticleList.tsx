@@ -7,14 +7,13 @@ const ArticleList = () => {
     return (
         <>
         {articles.map( (article: IArticleItem) =>
-            <div className="overflow-hidden max-h-72 ">
             <Article 
-                key={article.name}
+                key={article.id}
+                id={article.id}
                 name={article.name}
                 description={article.description}
                 date={article.date}
                 />
-            </div>
             )}
         </>
     )
