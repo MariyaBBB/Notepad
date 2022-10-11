@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 interface IMenuElementProps {
+  isLast: boolean,
   icon: string,
   name: string,
   link: string,
 }
 
-const MenuElement = ({icon, name, link}: IMenuElementProps) => {
+const MenuElement = ({isLast, icon, name, link}: IMenuElementProps) => {
     return(
          <li
-            className="rounded-t-md sm:rounded-none sm:border-none border-b-1 border-gray-light sm:bg-gray-light bg-white"
+            className= {isLast? "rounded-b-md sm:rounded-none sm:border-none border-b-1 border-gray-light sm:bg-gray-light bg-white":
+           "rounded-t-md sm:rounded-none sm:border-none border-b-1 border-gray-light sm:bg-gray-light bg-white"}
           > 
             <Link
               to={link}
