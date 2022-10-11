@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import './index.css';
+import ArticlePage from './pages/ArticlePage';
 import NewPost from './pages/NewPost';
 import Posts from './pages/Posts'
 
@@ -16,7 +17,10 @@ function App() {
           </Route>
 
           <Route path='/new-post' element={<NewPost />}>
-         </Route>
+          </Route>
+          
+          <Route path='/article/:id' element={<ArticlePage/>}>
+          </Route>
         </Routes>
         <Footer />
       </div>
