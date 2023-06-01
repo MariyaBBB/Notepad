@@ -1,11 +1,12 @@
-import AddIcon from "../assets/icons/add.svg";
-import NoteIcon from "../assets/icons/note.svg";
+import { FunctionComponent, SVGProps } from "react";
+import { ReactComponent as AddIcon} from "../assets/icons/add.svg";
+import { ReactComponent as NoteIcon} from "../assets/icons/note.svg";
 
 export interface IMenuItem {
   id: number,
   name: string;
   link: string;
-  icon: string;
+  icon?: string;
 }
 
 export const menuElements: IMenuItem[] = [
@@ -13,12 +14,12 @@ export const menuElements: IMenuItem[] = [
     id: 1,
     name: "Новая запись",
     link: "/new-post",
-    icon: AddIcon.toString(),
+    icon: "add",
   },
   {
     id: 2,
     name: "Список заметок",
     link: "/posts",
-    icon: NoteIcon.toString(),
+    icon: "note",
   },
 ];
