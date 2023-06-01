@@ -1,6 +1,7 @@
 import React, {  } from "react";
 import { useParams } from "react-router-dom";
 import { articles,  } from "../data/articles";
+import {ReactComponent as DataIcon} from "../assets/icons/data.svg";
 
 
 const ArticlePage = () => {
@@ -28,7 +29,7 @@ const ArticlePage = () => {
           </p>
 
           <div className="mt-8">
-            <img className="float-left pt-1 pr-1" alt="" src="../images/icons/calendar.svg" />
+            <DataIcon className="float-left mt-1 mr-1" />
             <span className="text-xs text-gray">21 августа 2022г.</span>
           </div>
         </div>
