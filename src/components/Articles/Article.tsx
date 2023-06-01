@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {ReactComponent as DataIcon} from "../../assets/icons/data.svg";
+import {ReactComponent as DetailIcon} from "../../assets/icons/details.svg";
+
+
 interface IArticleItemProps {
     id: string,
     name: string,
@@ -20,15 +24,17 @@ const Article = ({id, name, description, date}: IArticleItemProps) => {
             </h1>
             <div className="hidden sm:inline">
                 <div className="pt-4 ">
-                    <img className="float-left pt-1 pr-1" alt='' src="images/icons/calendar.svg" />
+                    {/* <img className="float-left pt-1 pr-1" alt='' src="images/icons/calendar.svg" /> */}
+                    <DataIcon className="float-left mt-1 mr-1"/>
                             <span className="text-xs text-gray  ">{date}</span>
                 </div>
                 <p className="overflow-hidden max-h-24">{description} </p>    
                 <div className="text-right grid grid-cols-1 pb-2"> 
-                    <Link to={`/article/${id}`} className="grid grid-flow-col justify-self-end text-green active:text-green-bright hover:text-green-light"> 
+                    <Link to={`/article/${id}`} className="link grid grid-flow-col justify-self-end text-green active:text-green-bright hover:text-green-light"> 
                         
                         <span className="pr-1">Подробнее </span> 
-                        <img alt='' className="float-right clear-none pt-1" src="images/icons/details.svg"/>
+                        {/* <img alt='' className="float-right clear-none pt-1" src="images/icons/details.svg"/> */}
+                        <DetailIcon className="icon float-right clear-none mt-1 text-green active:text-green-bright hover:text-green-light fill-green"/>
                     </Link> 
                 </div>   
             </div>        
