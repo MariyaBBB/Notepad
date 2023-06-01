@@ -29,6 +29,13 @@ div {
   @apply max-w-full pl-5
 }
 
+.link:hover .icon {
+  @apply fill-green-light 
+}
+
+.link:active .icon {
+  @apply fill-green-bright
+}
 
 
 
