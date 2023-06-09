@@ -1,3 +1,5 @@
-
-Please, use `npm start` to run the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Так выглядит главная страница блокнота:
+![Image alt](https://github.com/MariyaBBB/Notepad/blob/main/notepad.png)
+Можно открывать статьи, нажимая на заголовок статей или кнопку Подробнее
+При нажатии Новая запись, открывается страница для добавления новой записи.
+При нажатии список заметок, открывается главная страница со списком статей.
